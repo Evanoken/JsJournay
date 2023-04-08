@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript arrays</title>
+</head>
+<body>
+    <h1>Arrays in Javascript</h1>
+    <p id = "names"></p>
+</body>
+<script>
+    let arr = ["John", "Mary", "Peter", "Jane", "Mark"];
+    document.getElementById("names").innerHTML = arr;
+    arr.push("James");
+    /*document.getElementById("names").innerHTML = arr;
+    arr.pop();
+     document.getElementById("names").innerHTML = arr;
+    arr.shift();
+    document.getElementById("names").innerHTML = arr;
+    arr.unshift("John");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 0, "James");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 1);
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 1, "James");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 1, "James", "Peter");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 2, "James", "Peter");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 2, "James", "Peter", "Mark");
+    document.getElementById("names").innerHTML = arr;
+    arr.splice(2, 2, "James", "Peter", "Mark", "Jane");
+    document.getElementById("names").innerHTML = arr; ->*/
+    let len = arr.length;
+    document.getElementById("names").innerHTML = len;
+    document.getElementById("names").innerHTML = arr[arr.length - 1];
+    cars.array.forEach((item,index,array) => { console.log(item ,index ); });
+    document.getElementById("names").innerHTML = arr.toString();
+</script>
+</html>

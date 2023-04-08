@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods in Javascript</h1>
+    <p id = "names"></p>
+    <br/>
+    <h5 id="numbers"></h5>
+</body>
+<script>
+    let arr = ["John", "Mary", "Peter", "Jane", "Mark"];
+    document.getElementById("names").innerHTML = arr;
+    arr.push("James");
+    let len = arr.length;
+    document.getElementById("names").innerHTML = len;
+    //document.getElementById("names").innerHTML = arr[arr.length - 1];
+    arr.forEach((item,index,array) => { console.log(item ,index ); });
+    document.getElementById("names").innerHTML = arr.toString();
+    let last1 = arr.pop();
+    //document.getElementById("names").innerHTML = last1;
+    console.log(arr);
+    cars.shift();
+    document.getElementById("names").innerHTML = arr;
+    arr.unshift("Zedekiah");
+    document.getElementById("names").innerHTML = arr;
+
+    //concat used to merge two arrays
+    let arr1 = ["James", "Peter", "Mark", "Jane","Simon","Paul","Kenneth"];
+    let arr2 = ["John", "Mary", "Peter", "Jane", "Mark","Evans","Moses","Steven"];
+    let arr3 = arr1.concat(arr2);
+    document.getElementById("names").innerHTML = arr3;
+    arr3.sort();
+    document.getElementById("names").innerHTML = arr3;
+    //reverse method
+    arr3.reverse();
+    document.getElementById("names").innerHTML = arr3;
+    //slice method
+    let arr4 = arr3.slice(2,5);
+    document.getElementById("names").innerHTML = arr4;
+    //splice method
+    arr3.splice(2, 0, "James");
+    document.getElementById("names").innerHTML = arr3;
+    arr3.splice(2, 1);
+    document.getElementById("names").innerHTML = arr3;
+    arr3.splice(2, 1, "James");
+    document.getElementById("names").innerHTML = arr3;
+    arr3.splice(2, 1, "James", "Peter");
+    document.getElementById("names").innerHTML = arr3;
+    //map method creates a new array and performs a function on each element of the array
+    let arr5 = arr3.map((item,index,array) => { return item + " is a student"; });
+    document.getElementById("names").innerHTML = arr5;
+    //filter method creates a new array and performs a function on each element of the array
+    let arr6 = arr3.filter((item,index,array) => { return item.length > 4; });
+    document.getElementById("names").innerHTML = arr6;
+    //reduce method performs a function on each element of the array
+    let arr7 = arr3.reduce((total,item,index,array) => { return total + item; });
+    document.getElementById("names").innerHTML = arr7;
+    //reduceRight method performs a function on each element of the array
+    let arr8 = arr3.reduceRight((total,item,index,array) => { return total + item; });
+    document.getElementById("names").innerHTML = arr8;
+    //every method performs a function on each element of the array
+    let arr9 = arr3.every((item,index,array) => { return item.length > 4; });
+    document.getElementById("names").innerHTML = arr9;
+    //some method performs a function on each element of the array
+    let arr10 = arr3.some((item,index,array) => { return item.length > 4; });
+    document.getElementById("names").innerHTML = arr10;
+    //indexOf method returns the index of the first element in the array
+    let arr11 = arr3.indexOf("James");
+    document.getElementById("names").innerHTML = arr11;
+    //lastIndexOf method returns the index of the last element in the array
+    let arr12 = arr3.lastIndexOf("James");
+    document.getElementById("names").innerHTML = arr12;
+    //find method returns the value of the first element in the array
+    let arr13 = arr3.find((item,index,array) => { return item.length > 4; });
+    document.getElementById("names").innerHTML = arr13;
+    //findIndex method returns the index of the first element in the array
+    let arr14 = arr3.findIndex((item,index,array) => { return item.length > 4; });
+    document.getElementById("names").innerHTML = arr14;
+    //includes method returns true if the element is in the array
+    let arr15 = arr3.includes("James");
+    document.getElementById("names").innerHTML = arr15;
+    //flat method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr16 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr17 = arr16.flat(2);
+    document.getElementById("names").innerHTML = arr17;
+    //flatMap method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr18 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr19 = arr18.flatMap((item,index,array) => { return item + 1; });
+    document.getElementById("names").innerHTML = arr19;
+    //join method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr20 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr21 = arr20.join(" ");
+    document.getElementById("names").innerHTML = arr21;
+    //keys method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr22 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr23 = arr22.keys();
+    document.getElementById("names").innerHTML = arr23;
+    //values method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr24 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr25 = arr24.values();
+    document.getElementById("names").innerHTML = arr25;
+    //entries method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth
+    let arr26 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr27 = arr26.entries();
+    document.getElementById("names").innerHTML = arr27;
+    //copyWithin method copies array elements within the array, to and from specified positions
+    let arr28 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr29 = arr28.copyWithin(2,0);
+    document.getElementById("names").innerHTML = arr29;
+    //fill method fills all the elements of an array from a start index to an end index with a static value
+    let arr30 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr31 = arr30.fill(0,2,4);
+    document.getElementById("names").innerHTML = arr31;
+    //pop method removes the last element of an array
+    let arr32 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr33 = arr32.pop();
+    document.getElementById("names").innerHTML = arr33;
+    //push method adds one or more elements to the end of an array and returns the new length of the array
+    let arr34 = [1,2,3,[4,5,6,[7,8,9]]];
+    let arr35 = arr34.push(10);
+    document.getElementById("names").innerHTML = arr35;
+    let num1= [4,3,6,7,8,9,1,2,5];
+    let num2 = num1.map(multiply);
+    function multiply(num) {
+        return num * 2;
+    }
+    document.getElementById("numbers").innerHTML = num2;
+    //filter
+    let num3 = num1.filter(filt);
+    function filt(num) {
+        return num < 6;
+    }
+    document.getElementById("numbers").innerHTML = num3;
+    //reduce
+    let num4 = num1.reduce(red);
+    function red(total, num) {
+        return total + num;
+    }
+    document.getElementById("numbers").innerHTML = num4;
+</script>
+</html>

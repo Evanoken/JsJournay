@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS LOOPS</title>
+</head>
+<body>
+    <h2>Break and Continue</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        let k=0;
+        while (k < 10) {
+            if (k === 3) { 
+                break; 
+            }
+            document.write("The number is " + k + "<br>");
+            k++;
+        }    
+        let  h;
+        for(h=10; h<100; h+20){
+            if (h === 50) { 
+                break; 
+            }
+            document.write("The h values are " + h + "<br>");
+        }
+        let z;
+        for(z=10; z<100; z+20){
+            if (z === 50) { 
+                continue; 
+            }
+            document.write("The z values are " + z + "<br>");
+        }
+
+    </script>
+</body>
+<script>
+    //break statement breaks the loop and continues executing the code after the loop (if any):
+    let arr = ["John", "Mary", "Peter", "Jane", "Mark"];
+        let len = arr.length;
+        let i = 0;
+        let text = "";
+        for (let i = 0; i < len; i++) {
+            if (i === 3) { break; }
+            text += arr[i] + "<br>";
+        }
+        // document.getElementById("demo").innerHTML = text;
+        // //continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+        // let arr1 = ["John", "Mary", "Peter", "Jane", "Mark"];
+        // let len1 = arr1.length;
+        // let i1 = 0;
+        // let text1 = "";
+        // for (let i1 = 0; i1 < len1; i1++) {
+        //     if (i1 === 3) { continue; }
+        //     text1 += arr1[i1] + "<br>";
+        // }   
+        // document.getElementById("demo1").innerHTML = text1;
+        
+</script>
+</html>

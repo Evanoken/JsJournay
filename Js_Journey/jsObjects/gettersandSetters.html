@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessors</title>
+</head>
+<body>
+    <h2>Accessors</h2>
+    <p id="demo"></p>
+    <script>
+        var car = {
+            model: "Toyota",
+            engine: "V6",
+            year: 2010,
+            fuel: "Diesel",
+            get fuelType() {
+                return this.fuel;
+            }
+
+        };
+        document.getElementById("demo").innerHTML = car.fuelType;
+    </script>
+    <script>
+        var car = {
+            model: "Toyota",
+            engine: "V6",
+            year: 2010,
+            fuel: "",
+            set fuelType(x) {
+                this.fuel = x;
+            }
+
+        };
+        car.fuelType = "Petrol";
+        document.getElementById("demo").innerHTML = car.fuel;
+        </script>
+</body>
+</html>

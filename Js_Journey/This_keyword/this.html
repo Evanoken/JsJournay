@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <h1>THIS KEYWORD</h1>
+    <h6> this is used to refer to the current object. it refferences the object that is executing the current function. </h6>
+    <script>
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+</body>
+</html>

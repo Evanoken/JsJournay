@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous and Await</title>
+</head>
+<body>
+    <!-- //Asynchronous programming is a way of writing code that allows you to write code that does not block the main thread of execution.
+    It allows a function to run in the background while other code is executed. 
+    This is useful when you have a long running process that you do not want to block the main thread of execution.
+    The main thread of execution is the thread that is running the code that you are writing.
+    uses the await function to wait for a promise to be resolved before continuing the execution of the code.
+    The await function can only be used inside an async function. 
+    the async syntax is Async function name(){
+        await some_promise()
+    } 
+-->
+    <h1>Asynchronous and Await</h1>
+    <script>
+        let result = function(score){
+            return new Promise(function (resolve, reject){
+                if(score > 50){
+                    resolve("Pass")
+                }else{
+                    reject("Fail")
+                }
+            })
+        }
+        let grade = function(response) {
+            return new Promise(function (resolve, reject){
+                console.log("Calculating your grade...");
+                resolve("Your grade is A " + response);
+            })
+        }
+        // /*result(85).then(response => {
+        //     console.log(response);
+        //     return grade(response);
+        // }).then(response => {
+        //     console.log(response);
+        // }).catch(error => {
+        //     console.log(error);
+        // })*/
+        async function calculate_results(){
+            try{
+                const response = await result(30);
+                console.log(response);
+                const gradeResponse = await grade(response);
+                console.log(gradeResponse);
+            }catch(error){
+                console.log(error);
+            }
+        }
+        calculate_results();
+    </script>
+</body>
+</html>

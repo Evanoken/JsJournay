@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS OBJECTS</title>
+</head>
+<body>
+    <h1>Javascript Objects</h1>
+    <p id="demo"></p>
+    <script>
+        //Object literal
+        var person = {
+            firstName: "Evans",
+            lastName: "Ngugi",
+            age: 22,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo").innerHTML = person.firstName + " " +person.lastName + " is " + person.age + " years old. And " + person.eyeColor + " is his eye color.";
+    </script>
+    <script>
+        //using new keyword to create and define an object
+        var person = new Object();
+        person.firstName = "Evans";
+        person.lastName = "Ngugi";
+        person.age = 22;
+        person.eyeColor = "blue";
+        document.getElementById("demo").innerHTML = person.firstName + " " +person.lastName + " is " + person.age + " years old. And " + person.eyeColor + " is his eye color. In addition, he is a " + "<strong>COMPUTER SCIENTIST<strong/>" + "<br>" + "<br>";
+    </script>
+    <script>
+        //use object constructor to create and define an object
+        function person(firstName, lastName, age, eyeColor) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.eyeColor = eyeColor;
+        }
+        var myOwn = new person("John", "Doe", 50, "blue");
+        document.getElementById("demo").innerHTML = myOwn.firstName + " " +myOwn.lastName + " is " + myOwn.age + " years old. And " + myOwn.eyeColor + " is his eye color. In addition, he is a " + "<strong>Computer Science<strong/>" + "<br>" + "<br>";
+    </script>
+</body>
+</html>

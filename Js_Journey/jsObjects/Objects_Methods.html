@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Methods</title>
+</head>
+<body>
+    <h2>Objects Methods</h2>
+    <p id="demo"></p>
+    <button id = "clickMe">Greetings</button>
+    <script>
+        var person = {
+            firstName: "Peter",
+            lastName: "Kamau",
+            age: 50,
+            
+        };
+        //creating a function to be used as a method
+        function sayHi() {
+            alert("Hey there how are you doing?");
+        }
+        //adding the function as a method
+        person.message = sayHi;
+        //calling the method
+        document.getElementById("clickMe").onclick = person.message;
+    </script>
+</body>
+</html>

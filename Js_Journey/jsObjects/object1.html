@@ -1,0 +1,87 @@
+//An object is a real world entity that has properties and actions
+//An object is a collection of properties and methods
+//An object is a collection of name/value pairs
+ways to create objects
+
+//Object literal
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};  
+//Object constructor
+let person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;    
+person.eyeColor = "blue";
+//Object.create()
+let person = Object.create(Object.prototype);
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+//Object.create() with properties   
+let person = Object.create(Object.prototype, {
+    firstName: {
+        value: "John",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    lastName: {
+        value: "Doe",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    age: {
+        value: 50,
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    eyeColor: {
+        value: "blue",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    }
+});
+//Object.create() with properties and methods
+let person = Object.create(Object.prototype, {
+    firstName: {
+        value: "John",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    lastName: {
+        value: "Doe",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    age: {
+        value: 50,
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    eyeColor: {
+        value: "blue",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    },
+    fullName: {
+        value: function() {
+            return this.firstName + " " + this.lastName;
+        },
+        writable: true,
+        enumerable: true,
+        configurable: true
+    }
+});
+

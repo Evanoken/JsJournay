@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Promises</title>
+</head>
+<body>
+    <p>JavaScript is single threaded and synchronous. This means that only one thing can happen at a time. If you have a long running task, it will block the execution of the code and the user will have to wait. This is where promises come in. A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.</p>
+    <p>Promise is an object that represents the eventual completion or failure of an asynchronous operation. A promise is in one of these states:</p>
+    <ul>
+        <li>pending: initial state, neither fulfilled nor rejected.</li>
+        <li>fulfilled: meaning that the operation was completed successfully.</li>
+        <li>rejected: meaning that the operation failed.</li>
+    </ul>
+
+    </p>
+    <p>
+        A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+        with help of promises js can perform asynchronous operations. such network requests, file reading, etc. without having to wait for the operation to complete.
+        js can perform long network requests without blocking the main thread.
+        js can perform multiple network requests in parallel.
+
+    </p>
+    <h5>
+        then(callback) function is used to handle the fulfilled value of the promise. It takes two arguments: callback functions for the success and failure cases of the Promise.
+        catch(callback) function is used to handle the rejected value of the promise. It takes only one argument: callback function for the failure case of the Promise.
+
+    </h5>
+
+    <script>
+        let car = new Promise(function(resolve, reject) {
+           fuelTank = True;
+           if (fuelTank) {
+             resolve();
+           } else {
+             reject();
+           }
+        })  
+        car.then(function() {
+           document.write("Car has fuel and can be driven");
+        }).catch(function() {
+           document.write("Car has no fuel and cannot be driven");
+        });      
+     </script>
+</body>
+</html>

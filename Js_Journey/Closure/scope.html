@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This involves scope resolution</title>
+</head>
+<body>
+    <h2>A Closure has three scope chains</h2>
+    <pre>
+        <p>
+            1. It has access to its own scope - variables defined between its curly braces.
+            2. It has access to the outer function's variables - variables defined between the outer function's curly braces.
+            3. It has access to the global variables.
+        </p>
+    </pre>
+    <script>
+        //Closure is a function having access to the parent scope, even after the parent function has closed.
+        //A closure is a feature that enable an inner function to access the outer function's variables.
+
+        let a=10;// global scope
+        function myFunction() {
+            let b=20;// local scope
+            document.write("The value of a is " + a + "<br>");
+            document.write("The value of b is " + b + "<br>");
+            document.write("The sum of a and b is " + (a+b) + "<br>");
+        }
+        myFunction();
+    </script>
+    <script>
+        function myFunction() {
+            let a=24;
+            function func2() {
+                let b=25;
+                document.write("The value of a is " + a + "<br>");
+                document.write("The value of b is " + b + "<br>");
+                document.write("The sum of a and b is " + (a+b) + "<br>");
+            }
+            func2();
+        }
+    </script>
+</body>
+</html>

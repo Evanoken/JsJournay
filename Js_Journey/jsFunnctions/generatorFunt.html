@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <script>
+        function* functionGenerator() {
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let gen = functionGenerator();
+        let one = gen.next();
+        let two = gen.next();
+        let three = gen.next();
+        alert(JSON.stringify(one));
+        alert(JSON.stringify(two));
+        alert(JSON.stringify(three));
+        document.write("This is a javascript generator function." + "<br>");
+         </script>
+</body>
+</html>

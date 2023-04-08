@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+<body>
+    <h1>THIS KEYWORD</h1>
+    <h6> this is used to refer to the current object. it refferences the object that is executing the current function. </h6>
+    <!-- <script>
+        var age = 40;
+        function person(){
+            var age = 50;
+            alert("My age is " + age);
+            alert("My new age is this.age After visiting the moon surface. " +  this.age);
+        }
+        person();
+    </script> -->
+    <script>
+        const random = {
+            name : "John",
+            video: ["html", "css", "js"],
+            info(){
+                this.video.forEach(function(item){
+                    console.log(this.name + " has created a video on " + item);
+                }, this);
+            }
+        }
+        random.info();
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in javascript</title>
+</head>
+<body>
+    <p>A function is a group of reusable code</p>
+    <!-- function declaraton -->
+    <script>
+        function myFunction() {
+            document.write("This is a function");
+        }
+        myFunction();
+    </script>
+    <!-- function expression in this case a function is stored in a variable -->
+    <script>
+        var x = function(a, b){return a * b}
+        document.write("<br>" + "This is the product" + x(4, 3));
+    </script>
+    <!-- function constructor -->
+    <script>
+        var myFunction = new Function("a", "b", "return a * b");
+        document.write("<br>" + "This is the product" + myFunction(4, 3));
+    </script>
+    <!-- function hoisting -->
+    <script>
+        myFunction();
+        function myFunction() {
+            document.write("<br>" + "This is function hoisting");
+        }
+    </script>
+    <!-- self invoking functions -->
+    <script>
+        (function () {
+            document.write("<br>" + "This is a self invoking function");
+           // alert("Ouch! you have been hacked");
+        })();
+    </script>
+    <!-- function as objects -->
+    <script>
+        var myFunction = new Function("a", "b", "return a * b");
+        var x = myFunction(4, 3);
+        document.write("<br>" + "This is the product" + x);
+    </script>
+    <!-- function as objects -->
+    <script>
+        var body = "return Math.PI * r * r";
+        var circle = new Function("r", body);
+        document.write("<br>" + "This is the area of a circle" + circle(5));
+    </script>
+    <!-- Arrow functions  -->
+    <script>
+        var x = (a, b) => a * b;
+        document.write("<br>" + "This is the product" + x(4, 3));
+    </script>
+    <!-- Arrow functions  -->
+    <script>
+        var product = (a, b, c) => {return a * b * c};
+        let mult =  product(7,4,9)
+        document.write("<br>" + "This is the product" + mult);
+    </script>
+    <!-- generator functions(the next method is a key method in generator functions) -->
+    <script>
+        function* idMaker() {
+            var index = 0;
+            while (index < 3)
+            yield index++;
+        }
+        var gen = idMake
+        r();
+        document.write("<br>" + gen.next().value);
+        document.write("<br>" + gen.next().value);
+        document.write("<br>" + gen.next().value);
+    </script>
+    <!-- generator functions -->
+    <script>
+        function* functionGenerator() {
+            yield 1;
+            yield 2;
+            return 3;
+        }
+        let gen = functionGenerator();
+        let one = gen.next();
+        let two = gen.next();
+        let three = gen.next();
+        alert(JSON.stringify(one));
+        alert(JSON.stringify(two));
+        alert(JSON.stringify(three));
+        </script>
+        <!-- predefined functions -->
+        <script>
+            //eval() function is used to evaluate a string and return a value
+            //parseInt() function is used to convert a string to an integer
+            //parseFloat() function is used to convert a string to a floating point number
+            //isNaN() function is used to check if a value is not a number
+            //isFinite() function is used to check if a value is a finite number
+            //decodeURI() function is used to decode a URI
+            //encodeURI() function is used to encode a URI
+            //decodeURIComponent() function is used to decode a URI component
+            //encodeURIComponent() function is used to encode a URI component
+            //escape() function is used to escape a string
+            //unescape() function is used to unescape a string
+            //alert() function is used to display an alert box
+            //confirm() function is used to display a confirm box
+            //prompt() function is used to display a prompt box
+            //setTimeout() function is used to call a function after a specified number of milliseconds
+            //setInterval() function is used to call a function repeatedly after a specified number of milliseconds
+            //clearTimeout() function is used to stop calling a function after a specified number of milliseconds
+            //clearInterval() function is used to stop calling a function repeatedly after a specified number of milliseconds
+            //Number() function is used to convert an object to a number
+            //String() function is used to convert an object to a string
+            //Boolean() function is used to convert an object to a boolean
+            //Object() function is used to convert an object to an object
+            //Symbol() function is used to create a symbol
+            //Date() function is used to create a date object
+            //RegExp() function is used to create a regular expression object
+            //Error() function is used to create an error object
+            //Array() function is used to create an array object
+            //Function() function is used to create a function object
+            //Promise() function is used to create a promise object
+            //JSON() function is used to convert a JavaScript object into a JSON string
+            //Math() function is used to perform mathematical tasks
+            //
+
+        </script>
+        
+</body>
+</html>

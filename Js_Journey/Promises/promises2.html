@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Promises</title>
+</head>
+<body>
+    <script>
+        let empty_tank = function(){
+            return new Promise(function(resolve, reject){
+                resolve("The car does not have enough fuel");
+            });
+        }
+        let engine = function(){
+            return new Promise(function(resolve, reject){
+                resolve("The engine is overheating and needs to cool down");
+            });
+        }
+        let Travel = function(){
+            return new Promise(function(resolve, reject){
+                resolve("The car is not safe for travel");
+            });
+        }
+        empty_tank().then(function()
+        {
+            return engine();
+        }).then(functions).then(function(){
+            return Travel();
+        }).then(function(){
+            console.log("Promise is resolved");
+         })//.catch(function(error){
+        //     console.log(error);
+        // }
+    </script>
+</body>
+</html>

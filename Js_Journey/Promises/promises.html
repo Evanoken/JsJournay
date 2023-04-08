@@ -1,0 +1,52 @@
+//Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
+//A Promise has four states:
+//Pending: Initial State, before the Promise succeeds or fails
+//Fulfilled: Completed Promise
+//Rejected: Failed Promise
+//Settled: Promise that is either fulfilled or rejected
+//A Promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A Promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+//A Promise is in one of these states:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Promises</title>
+</head>
+<body>
+    <script>
+        let car = new Promise(function(resolve, reject) {
+            fuelTank = True;
+            if (fuelTank) {
+              resolve();
+            } else {
+              reject();
+            }
+          });
+          
+          car.then(function() {
+            document.write("Car has fuel and can be driven");
+          })
+          .catch(function() {
+            document.write("Car has no fuel and cannot be driven");
+          });
+          
+    </script>
+    <script>
+        let promise = new Promise(function(resolve, reject) {
+            // the function is executed automatically when the promise is constructed
+          
+            // after 1 second signal that the job is done with the result "done"
+            setTimeout(() => resolve("done"), 1000);
+          });
+          
+          // resolve runs the first function in .then
+          promise.then(
+            result => alert(result), // shows "done!" after 1 second
+            error => alert(error) // doesn't run
+          );
+    </script>
+    
+</body>
+</html>
